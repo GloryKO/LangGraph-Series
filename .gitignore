@@ -1,0 +1,12 @@
+# Environments
+.env
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Data (we keep events_db.json as seed data)
+data/local_info.db
+
+# OS generated files
+.DS_Store
+Thumbs.db
