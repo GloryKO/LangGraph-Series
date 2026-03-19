@@ -5,7 +5,7 @@ from agent.graph import build_graph
 
 WELCOME_BANNER = """
 ╔══════════════════════════════════════════════════════════════╗
-║              🌆  City Events Agent  🌆                      ║
+║               City Events Agent                       ║
 ║                                                              ║
 ║  I can help you with:                                        ║
 ║    • Finding local events in cities worldwide                ║
@@ -28,13 +28,13 @@ def run_cli():
         try:
             user_input = input("You: ").strip()
         except (EOFError, KeyboardInterrupt):
-            print("\nGoodbye! 👋")
+            print("\nGoodbye!")
             break
 
         if not user_input:
             continue
         if user_input.lower() in ("quit", "exit", "q"):
-            print("Goodbye! 👋")
+            print("Goodbye!")
             break
 
         # Invoke the graph
@@ -45,4 +45,4 @@ def run_cli():
             assistant_msg = result["messages"][-1].content
             print(f"\nAssistant: {assistant_msg}\n")
         except Exception as exc:
-            print(f"\n❌ Error: {exc}\n")
+            print(f"\n Error: {exc}\n")
